@@ -5,7 +5,7 @@ if (($EUID !=0)); then
 fi
 apt update
 apt install curl docker
-
+ip=$(curl http://ifconfig.me)
 docker run -d \
   --name=amnezia-wg \
   -e LANG=en \
