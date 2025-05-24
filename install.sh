@@ -3,8 +3,8 @@ if (($EUID !=0)); then
      echo Script must be run by root.
      exit
 fi
-apt update
-apt install curl docker
+apt-get update
+apt-get install -y curl docker
 ip=$(curl http://ifconfig.me)
 docker run -d \
   --name=amnezia-wg \
